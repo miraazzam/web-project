@@ -1,10 +1,49 @@
+let hamburgerData = {
+    links: [
+        { selector: ".page a.home" },
+        { selector: ".page a.menu" },
+        { selector: ".page a.about" },
+        { selector: ".login a.login" },
+        { selector: ".login a.signup" }
+    ]
+};
+
+
+$(function () {
+  let $hamburger = $(".hamburger");
+  let $header = $(".header");
+  
+  let $dropdown = $("<div class='dropdown'></div>");
+  $header.append($dropdown);
+
+  $(".page a, .login a").each(function () {
+    $dropdown.append($(this).clone());
+  });
+
+  $hamburger.on("click", function (e) {
+    e.stopPropagation();
+    $dropdown.toggleClass("show");
+  });
+
+  $dropdown.find("a").on("click", function () {
+    $dropdown.removeClass("show");
+  });
+
+  $(document).on("click", function (e) {
+    if (!$header.is(e.target) && $header.has(e.target).length === 0) {
+      $dropdown.removeClass("show");
+    }
+  });
+});
+
+
 let aboutData = {
     title: "About Us",
     subtitle: "Where Every Cup Has a Story",
     sections: [
         {
             heading: "Our Story",
-            text: "Our Café started with a passion for crafting exceptional coffee and creating a warm, modern space for students, workers, and coffee lovers. Every cup we serve tells a story."
+            text: "Our Café started with a passion for crafting exceptional coffee and creating a warm, modern space for students, workers, and coffee lovers. Every cup we serve tells a story.We opened our doors several years ago with one simple goal; to serve the finest quality coffee with pasion and care.Our team is more like a family, either if you are here for morning coffe or relaxing afternoon, we promise our workers will create a welcoming atmospere."
         },
         {
             heading: "What Makes Us Special",
@@ -28,77 +67,32 @@ let aboutData = {
 };
 
 $(function () {
+
     $("#about-title").text(aboutData.title);
     $("#about-subtitle").text(aboutData.subtitle);
 
-    let container = $("#about-container");
+    const container = $("#about-container");
 
-    aboutData.sections.forEach(function (section) {
+    aboutData.sections.forEach(section => {
+
         if (section.type === "features") {
 
-        
-            container.append('<div class="section-card"><h2>' + section.heading + '</h2></div>');
+            container.append(`
+                <div class="section-card">
+                    <h2>${section.heading}</h2>
+                </div>
+            `);
 
-         
-            let currentSection = container.children().last(); // get the newly added section
+            const currentSection = container.children().last();
 
-            
-            section.features.forEach(function (e) {
-                currentSection.append(
-                    '<div class="feature-card">' +
-                    '<h3>' + e.title + '</h3>' +
-                    '<p>' + e.text + '</p>' +
-                    '</div>'
-                );
+            section.features.forEach(feature => {
+                currentSection.append(`
+                    <div class="feature-card">
+                        <h3>${feature.title}</h3>
+                        <p>${feature.text}</p>
+                    </div>
+                `);
             });
-
-
-
-
-
-
-
-
-
-            // let featureHTML = '<div class="feature-cards">';
-
-
-            // section.features.forEach(function (e) {
-
-            //     featureHTML +=
-            //         '<div class="feature-card">' +
-            //         '<h3>' + e.title + '</h3>' +
-            //         '<p>' + e.text + '</p>' +
-            //         '</div>';
-
-            //     // `
-            //     //     <div class="feature-card">
-            //     //         <h3>${e.title}</h3>
-            //     //         <p>${e.text}</p>
-            //     //     </div>
-            //     // `;
-
-            // });
-
-
-
-
-            // featureHTML += '</div>';
-            // container.append(
-            //     '<div class="section-card">' +
-            //     '<h2>' + section.heading + '</h2>' +
-            //     featureHTML +
-            //     '</div>'
-            // );
-
-            // // container.append(`
-            // //     <div class="section-card">
-            // //         <h2>${section.heading}</h2>
-            // //         ${featureHTML}
-            // //     </div>
-            // // `);
-
-
 
         } else {
             container.append(`
@@ -109,4 +103,5 @@ $(function () {
             `);
         }
     });
+
 });

@@ -62,5 +62,12 @@ document.getElementById("coffeeQuote").textContent =
   quotes[Math.floor(Math.random() * quotes.length)];
 
 
+  $(".feedback button").on("click", function() {
+    alert("Thank you for your feedback!");
+    $(".feedback input, .feedback textarea").val("");
 });
+
+
+});
+
 

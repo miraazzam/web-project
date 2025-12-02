@@ -174,10 +174,18 @@ body {
   color: #f5eee6;
 }
 
+button
+  {
+    background-color: #6f4e37;
+    color: white;
+    padding: 8px 10px; 
+    margin-bottom: 20px;
+  }
+
 footer {
   background-color: rgb(35, 33, 33);
   width: 100%;
-  height: auto;
+  height: 200px;
  
 }
 

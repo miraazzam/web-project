@@ -1,0 +1,96 @@
+body{
+    font-family: Arial;
+  margin: 0;
+  background: #ede7e0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+#coffeeLoader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff4e6;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.feedback{
+   background: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+max-width: 450px;
+height: auto;
+  margin: 20px auto;
+  margin-top: 70px;
+}
+.feedback button {
+  background: #b58b63;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  background: #d2a679;
+}
+
+
+
+
+.mapandfeedback {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+  
+}
+.feedback button {
+  background: #412b17;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background: #8a6b4c;
+}
+#map{
+ width: 800px;
+ height: 500px;
+}
+
+.feedback input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.feedback textarea {
+  width: 90%;
+  height: 80px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#copyright{
+  color: #f5eee6;
+}
+
+footer{
+  background-color: rgb(35, 33, 33);
+width: 100vw;
+height: auto;
+
+}
+

@@ -9,6 +9,7 @@ let hamburgerData = {
 };
 
 
+
 $(function () {
   let $hamburger = $(".hamburger");
   let $header = $(".header");

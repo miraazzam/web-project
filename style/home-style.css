@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #edd9c4; 
+  background-color: #f5efe6;
   color: #4a3f35;           
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -114,7 +114,7 @@ body {
   flex-direction: row; 
   align-items: center;
   gap: 40px;
-  background: rgba(248,246,242,0.75);  
+  background: #ede3d6;  
   padding: 36px;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
@@ -163,7 +163,7 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: #c27b48; 
+  background-color: #b89b7a;
   color: white;
   padding: 8px 16px;
   border-radius: 25px;
@@ -218,6 +218,7 @@ body {
   .dropdown {
     position: absolute;
   }
+  
   .section {
     flex-direction: column;
     text-align: center;

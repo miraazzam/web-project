@@ -6,7 +6,7 @@
 
 body{
   font-family: Arial;
-  background: #d5b896;
+  background: #f6e5d2;
   text-align: center;
   padding-top: 80px;
 }
@@ -179,6 +179,10 @@ button:hover {
 
 }
 
+.offers {
+    display: none;
+}
+
 @media (max-width: 650px) {
 
     .page,
@@ -195,6 +199,5 @@ button:hover {
         padding: 15px 20px;
     }
 }
-
 
 

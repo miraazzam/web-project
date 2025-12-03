@@ -71,7 +71,7 @@ $(function () {
 
    
 $("#btn-cash").on("click", function() {
-    alert("Please login to continue with Cash on Delivery.");
+    alert("Your order will be delivered soon. Thank you!");
 });
 
 

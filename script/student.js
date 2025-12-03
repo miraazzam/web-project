@@ -41,31 +41,28 @@ $("#loginBtn").click(function () {
     $("#studentLoginForm").addClass("pop");
 });
 
+
 $("#cancelBtn").click(function () {
-   
     $("#studentLoginForm").removeClass("pop");
-  
-    $("#studentEmail, #studentPassword").val("");
     $("#loginMessage").text("");
 });
 
+
 $("#studentLoginForm").submit(function (e) {
     e.preventDefault();
-    let email = $("#studentEmail").val();
-    let pass = $("#studentPassword").val();
+    const email = $("#studentEmail").val();
+    const pass = $("#studentPassword").val();
 
-    if ((email.endsWith(".edu.lb") || email.endsWith("@gmail.com")) && pass !== "") {
-      
-        $("#loginMessage").css("color", "green").text(""); 
-        $("#studentLoginForm").removeClass("pop"); 
-        $("#studentEmail, #studentPassword").val(""); 
-        alert("Login successful! Discounts unlocked."); 
+    if ((email.endsWith(".edu.lb") || email.endsWith(".edu")) && pass === "123456") {
+        $("#loginMessage").css("color", "green").text("Login successful! Discounts unlocked.");
+        $(".discountPrice").show();
+        $("#studentLoginForm").removeClass("pop");
+        $(".offers").show();
+
     } else {
-        
-        $("#loginMessage").css("color", "red").text("Invalid login. Use @gmail.com or .edu.lb");
+        $("#loginMessage").css("color", "red").text("Invalid login.");
     }
 });
-
 
 
 

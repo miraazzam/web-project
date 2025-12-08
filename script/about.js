@@ -72,7 +72,7 @@ $(function () {
     $("#about-title").text(aboutData.title);
     $("#about-subtitle").text(aboutData.subtitle);
 
-    const container = $("#about-container");
+    let container = $("#about-container");
 
     aboutData.sections.forEach(section => {
 
@@ -84,7 +84,7 @@ $(function () {
                 </div>
             `);
 
-            const currentSection = container.children().last();
+            let currentSection = container.children().last();
 
             section.features.forEach(feature => {
                 currentSection.append(`

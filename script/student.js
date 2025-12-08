@@ -50,8 +50,8 @@ $("#cancelBtn").click(function () {
 
 $("#studentLoginForm").submit(function (e) {
     e.preventDefault();
-    const email = $("#studentEmail").val();
-    const pass = $("#studentPassword").val();
+    let email = $("#studentEmail").val();
+    let pass = $("#studentPassword").val();
 
     if ((email.endsWith(".edu.lb") || email.endsWith(".edu")) && pass === "123456") {
         $("#loginMessage").css("color", "green").text("Login successful! Discounts unlocked.");
@@ -63,6 +63,7 @@ $("#studentLoginForm").submit(function (e) {
         $("#loginMessage").css("color", "red").text("Invalid login.");
     }
 });
+
 
 
 

@@ -28,11 +28,6 @@ document.onclick = function (event) {
   if (!header.contains(event.target)) {
     dropdown.classList.remove('show');
   }
-};
-
-document.onclick = function (event) {
-  if (!header.contains(event.target)) {
-    dropdown.classList.remove('show');
-  }
 
 };
+

@@ -1,5 +1,5 @@
 let hamburgerData = {
-    links: [
+    links: [ 
         { selector: ".page a.home" },
         { selector: ".page a.menu" },
         { selector: ".page a.about" },

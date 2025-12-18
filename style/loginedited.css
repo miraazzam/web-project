@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: Arial;
+  background: #fbeddd;
+  text-align: center;
+  padding-top: 80px;
+ 
+}
+
+.header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    background-color: #f8f6f2;
+    backdrop-filter: blur(5px);
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: visible; 
+}
+
+#hero::after {
+    z-index: 1;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.page,.login {
+    display: flex;
+    gap: 20px;
+}
+
+.page a,
+.login a {
+    text-decoration: none;
+    color: #4a3f35;
+    font-weight: 500;
+}
+
+.page a:hover,
+.login a:hover {
+    color: #c27b48;
+}
+
+.login {
+    margin-left: auto;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px; 
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: rgb(11, 11, 11);
+    border-radius: 2px;
+}
+   
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background: #efe5e5;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dropdown.show {
+    display: flex;
+}
+
+.dropdown a {
+    margin: 10px 0;
+    color: #4a3f35;
+    text-decoration: none;
+}
+
+
+
+
+
+h1, h2 {
+  text-align: center;
+  font-size: clamp(18px, 4vw, 32px);
+  margin-top: 80px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #8b6147;
+}
+#studentLoginForm {
+  padding: 20px;
+  border-radius: 10px;
+  width: 35%;        
+  max-width: 450px;  
+  min-width: 300px;  
+  margin: 20px auto;
+  height: 250px;
+}
+
+#studentLoginForm input {
+  width: 90%;        
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#studentLoginForm button {
+  padding: 8px 10px;
+  margin-right: 5px;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#studentLoginForm button:hover {
+  background: #8b6147;
+}
+
+.offers{
+  display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.form{
+  background-image: url("https://media.istockphoto.com/id/95380176/photo/fresh-croissant.jpg?s=612x612&w=0&k=20&c=WC9_MHOVAcCPF39ER4plI5yFmVhnO-bKqTeiXk3TKmM=");
+  background-size: cover;
+
+}
+
+#loginMessage{
+    text-align: center;
+  font-size: clamp(14px, 2.5vw, 20px);
+  margin-top: 10px;
+  min-height: 20px; 
+}
+
+.offers {
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    .page,
+    .login {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
+}
+
+
+
+
+

@@ -1,5 +1,5 @@
 let hamburger = document.getElementById('hamburger');  
-let header    = document.querySelector('.header');     
+let header    = document.querySelector('.header');      
 
 let dropdown = document.createElement('div');
 dropdown.classList.add('dropdown');

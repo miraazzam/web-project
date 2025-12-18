@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #f5efe6;
+    color: #4b3621;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #e6d3b1;
+}
+
+.header img {
+    width: 60px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #4b3621;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.headerr {
+    background-color: #d8c3a5;
+    text-align: center;
+    padding: 20px;
+}
+
+.page {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.menu {
+    width: 70%;
+}
+
+
+.section-heading {
+    font-size: 24px;
+    margin: 30px 0 15px;
+    border-bottom: 2px solid #c4a484;
+    padding-bottom: 5px;
+}
+
+.section-block {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 20px;
+}
+
+.item-card {
+    background-color: #fffaf3;
+    width: 200px;           
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-card h3 {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.price {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #7a4a2e;
+}
+
+
+.add-btn {
+    background-color: #7a4a2e;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #5a3a26;
+}
+
+
+.cart {
+    width: 30%;
+    background-color: #fffaf3;
+    padding: 20px;
+    border-radius: 12px;
+ 
+    height: fit-content;
+}
+
+#cart-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+
+.total {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+#btn-cash {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b3621;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+    
+
+    .menu,
+    .cart {
+        width: 100%;
+    }
+
+    .section-block {
+        justify-content: center;
+    }
+
